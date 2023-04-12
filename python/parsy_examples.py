@@ -148,6 +148,13 @@ def ex__many():
     print(p.parse("f"))                             # ['f']
     print(p.parse("ff"))                            # ['f', 'f']
 
+    try:
+        print(p.parse("ffb"))
+    except ParseError as e:
+        print(e)                                    # expected one of 'EOF', 'f', at 0:2
+
+    print(p.parse_partial("ffb"))                   # (['f', 'f'], 'b')
+
 
 def ex__times():
     p = string("f").times(2)
