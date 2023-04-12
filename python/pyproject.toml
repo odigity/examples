@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "examples-python"
+version = "0.0.1"
+description = "Examples of how to use various Python packages, for reference purposes."
+authors = ["Ofer Nave <odigity@gmail.com>"]
+license = "WTFPL"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+parsy = "^2.1"
